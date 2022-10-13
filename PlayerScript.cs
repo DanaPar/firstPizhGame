@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     bool isGrounded = false;
 
     Rigidbody2D RB;
+
+    public GameManager gameManager;
     
     private void Awake()
     {
@@ -36,6 +38,14 @@ public class PlayerScript : MonoBehaviour
             {
                 isGrounded = true;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "obstacle")
+        {
+            gameManager.GameOver();
         }
     }
 }
