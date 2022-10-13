@@ -9,6 +9,8 @@ public class Obstacles : MonoBehaviour
 
     public GameObject obstacle1;
     public GameObject obstacle2;
+    public GameObject obstacle3;
+    public GameObject obstacle4;
 
     int chooseObstacle;
 
@@ -31,8 +33,10 @@ public class Obstacles : MonoBehaviour
 
     void GenerateObstacle()
     {
-        chooseObstacle = Random.Range(1, 3);
+        chooseObstacle = Random.Range(1, 5);
         if (chooseObstacle == 1) { GameObject newObstacle = Instantiate(obstacle1); }
         if (chooseObstacle == 2) { GameObject newObstacle = Instantiate(obstacle2); }
+        if (chooseObstacle == 3) { GameObject newObstacle = Instantiate(obstacle3); }
+        if (chooseObstacle == 4) { GameObject newObstacle = Instantiate(obstacle4); }
     }
 }
