@@ -11,6 +11,8 @@ public class Obstacles : MonoBehaviour
     public GameObject obstacle2;
     public GameObject obstacle3;
     public GameObject obstacle4;
+    public GameObject obstacle5;
+    public GameObject obstacle6;
 
     int chooseObstacle;
 
@@ -33,10 +35,12 @@ public class Obstacles : MonoBehaviour
 
     void GenerateObstacle()
     {
-        chooseObstacle = Random.Range(1, 5);
+        chooseObstacle = Random.Range(1, 7);
         if (chooseObstacle == 1) { GameObject newObstacle = Instantiate(obstacle1); }
         if (chooseObstacle == 2) { GameObject newObstacle = Instantiate(obstacle2); }
         if (chooseObstacle == 3) { GameObject newObstacle = Instantiate(obstacle3); }
         if (chooseObstacle == 4) { GameObject newObstacle = Instantiate(obstacle4); }
+        if (chooseObstacle == 5) { GameObject newObstacle = Instantiate(obstacle5); }
+        if (chooseObstacle == 6) { GameObject newObstacle = Instantiate(obstacle6); }
     }
 }
