@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Wait : MonoBehaviour
 {
     public float waitTime = 3;
+    
 
     void Start()
     {
+
         StartCoroutine(Intro());
     }
 

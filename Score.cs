@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.InteropServices;
 
 public class Score : MonoBehaviour
-{    
+{
+
     int score;
     Text scoreText;
 
@@ -24,6 +26,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         timer += Time.deltaTime;
         if(timer >= maxTime)
         {
@@ -32,17 +35,21 @@ public class Score : MonoBehaviour
             timer = 0;
         }
 
-        if (score >= 500)
+
+        if (score >= 100)
         {
             SceneManager.LoadScene("Finish");
+            
         }
 
         if (score >= 50)
         {
             Vector2 start = racoon.transform.position;
-            Vector2 destination = new Vector2(4, -0.52f);
+            Vector2 destination = new Vector2(5, -0.52f);
             racoon.transform.position = Vector2.Lerp(start, destination, Time.deltaTime * 1);
         }
 
     }
+
+    
 }
