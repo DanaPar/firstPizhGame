@@ -7,9 +7,7 @@ public class WebGLPluginJS : MonoBehaviour
     [DllImport("__Internal")]
     public static extern void GameFinished();
 
-    private void Start()
-    {
-        GameFinished();
-    }
+  
+
 
 }

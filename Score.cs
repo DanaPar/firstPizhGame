@@ -36,18 +36,55 @@ public class Score : MonoBehaviour
         }
 
 
-        if (score >= 100)
+        if (score >= 400)
         {
             SceneManager.LoadScene("Finish");
             
         }
 
-        if (score >= 50)
+        if (score >= 50 && score <= 100)
+        {
+            Vector2 start = racoon.transform.position;
+            Vector2 destination = new Vector2(6, -0.52f);
+            racoon.transform.position = Vector2.Lerp(start, destination, Time.deltaTime * 1);
+        }
+
+        if (score >= 100 && score <= 150)
         {
             Vector2 start = racoon.transform.position;
             Vector2 destination = new Vector2(5, -0.52f);
             racoon.transform.position = Vector2.Lerp(start, destination, Time.deltaTime * 1);
         }
+
+        if (score >= 150 && score <= 200)
+        {
+            Vector2 start = racoon.transform.position;
+            Vector2 destination = new Vector2(4, -0.52f);
+            racoon.transform.position = Vector2.Lerp(start, destination, Time.deltaTime * 1);
+        }
+
+        if (score >= 200 && score <= 250)
+        {
+            Vector2 start = racoon.transform.position;
+            Vector2 destination = new Vector2(3, -0.52f);
+            racoon.transform.position = Vector2.Lerp(start, destination, Time.deltaTime * 1);
+        }
+
+        if (score >= 250 && score <= 350)
+        {
+            Vector2 start = racoon.transform.position;
+            Vector2 destination = new Vector2(2, -0.52f);
+            racoon.transform.position = Vector2.Lerp(start, destination, Time.deltaTime * 1);
+        }
+
+        if (score >= 350)
+        {
+            Vector2 start = racoon.transform.position;
+            Vector2 destination = new Vector2(20, -0.52f);
+            racoon.transform.position = Vector2.Lerp(start, destination, Time.deltaTime * 1);
+        }
+
+
 
     }
 
